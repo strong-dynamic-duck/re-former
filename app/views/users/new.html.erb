@@ -31,16 +31,5 @@
 <% end %>
 
 <% if true %>
-    <%= form_with model: @user do |form| %>
-        <%= form.label :username, "Логин" %>
-        <%= form.text_field :username, placeholder: "Мне нужно имя" %>
-
-        <%= form.label :email, "Email" %>
-        <%= form.text_field :email, placeholder: "example@example.com" %>
-
-        <%= form.label :password, "Пароль" %>
-        <%= form.password_field :password, placeholder: "Я вижу ориентир" %>
-
-        <%= form.submit %>
-    <% end%>
+    <%= render "form", user: @user %>
 <% end %>
